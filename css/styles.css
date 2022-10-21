@@ -23,7 +23,16 @@ body {
     font-family: 'Merriweather', serif;
     color: #fff;
 }
-
+#back-to-top
+{
+    display: none;
+    position: fixed;
+    font-size: 52px;
+    color: #076363;
+    bottom: 50;
+    right: 50;
+    z-index: 999;
+}
 p {
     margin: 0;
 }
@@ -61,7 +70,7 @@ main {
 }
 
 .main__hero {
-    min-height: 100vh;
+    min-height: 80vh;
     padding-top: 3em;
     background: linear-gradient(0deg, rgba(136, 203, 171, 1) 0%, rgb(0 205 205) 100%);
 
@@ -85,8 +94,17 @@ section {
     min-height: 100vh;
 }
 
+
 #section1 {
     background-color: #fff;
+    opacity: 0;
+   
+}
+.shown
+{
+    transition: opacity 1.5s ease-in, transform 1.5s ease-in ;
+    opacity: 1 !important;
+    transform: scaleY(1);
 }
 
 
@@ -116,13 +134,17 @@ section {
     line-height: 60px;
 }
 
-.navbar__menu li:hover {
+.navbar__menu li:hover  {
     display: inline-block;
     list-style: none;
     border-bottom: solid 3px var(--font-color);
     background-color: #76dedebd;
 }
 
+.nav__active {
+    border-bottom: solid 3px var(--font-color);
+    background-color: #76dedebd;
+}
 .navbar__menu li a {
     color: var(--font-color);
     margin: 20px 10px;
@@ -146,7 +168,10 @@ section {
     color: #fff;
     transition: ease 0.3s all;
 }
-
+.hide__nav
+{
+    display: none;
+}
 /* Header Styles */
 .page__header {
     background: #fff;
@@ -222,6 +247,7 @@ section {
 
 #section2 {
     background-color: var(--bg-color);
+    opacity: 0;
 }
 
 #section2 h2 {
@@ -255,11 +281,28 @@ section {
     line-height: 2.5rem;
     margin: 31px;
 }
+#section3
+{
+    opacity: 0;
+}
+#section4
+{
+    opacity: 0;
+}
+
 
 .section3-content {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+#section4 h3
+{
+    text-align: left;
+}
+.section4-content
+{
+    text-align: left;
 }
 
 h3 {
@@ -306,7 +349,7 @@ section:nth-of-type(even) .landing__container {
 /* Circles appear to be random do to use of :nth-of-type psuedo class */
 section:nth-of-type(odd) .landing__container::before {
     content: '';
-    background: rgba(255, 255, 255, 0.187);
+    background: rgba(1, 44, 94, 0.187);
     position: absolute;
     z-index: -5;
     width: 20vh;
@@ -318,8 +361,8 @@ section:nth-of-type(odd) .landing__container::before {
 
 section:nth-of-type(even) .landing__container::before {
     content: '';
-    background: rgb(255, 255, 255);
-    background: linear-gradient(0deg, rgba(255, 255, 255, .1) 0%, rgba(255, 255, 255, .2) 100%);
+    background: rgba(1, 44, 94, 0.187);
+    background: rgba(1, 44, 94, 0.187);
     position: absolute;
     top: 3em;
     right: 3em;
@@ -333,8 +376,8 @@ section:nth-of-type(even) .landing__container::before {
 
 section:nth-of-type(3n) .landing__container::after {
     content: '';
-    background: rgb(255, 255, 255);
-    background: linear-gradient(0deg, rgba(255, 255, 255, .1) 0%, rgba(255, 255, 255, .2) 100%);
+    background: rgba(1, 44, 94, 0.187);
+    background: rgba(1, 44, 94, 0.187);
     position: absolute;
     right: 0;
     bottom: 0;
@@ -365,18 +408,17 @@ section:nth-of-type(3n + 1) .landing__container::after {
 /* ---- Theme State Rules ---- */
 /* Section Active Styles */
 /* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
-section.your-active-class {
-
-    /*background: rgb(0, 0, 0);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);*/
+section.active {
+    background: rgb(30, 30, 30);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
-section.your-active-class .landing__container::before {
+section.active .landing__container::before {
     opacity: 1;
     animation: rotate 4s linear 0s infinite forwards;
 }
 
-section.your-active-class .landing__container::after {
+section.active .landing__container::after {
     opacity: 1;
     animation: rotate 5s linear 0s infinite forwards reverse;
 }
