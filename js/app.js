@@ -46,8 +46,8 @@ const isInViewport = (el) => {
     return (
         bounding.top >= 0 &&
         bounding.left >= 0 &&
-        bounding.bottom - 65 <= window.innerHeight &&
-        bounding.right <= window.innerWidth
+        bounding.bottom - 65 <= el.clientHeight &&
+        bounding.right <= el.clientWidth
     );
 }
 
@@ -146,7 +146,7 @@ const docFarg = document.createDocumentFragment();
 // add Home to menu
 const headerDataNav = header.getAttribute('data-nav');
 const headerId = header.getAttribute('id');
-const homeLiElement = document.createElement('li');
+let homeLiElement = document.createElement('li');
 homeLiElement.dataset.nav = headerDataNav;
 homeLiElement.classList.add('nav_menu_item');
 homeLiElement.innerHTML = `<a href="#${headerId}" title="go to ${headerId}" class="nav_menu_link"> ${headerDataNav}</a>`;
@@ -156,7 +156,7 @@ docFarg.appendChild(homeLiElement);
 for (const item of sections) {
     const sectionDataNav = item.getAttribute('data-nav');
     const sectionId = item.getAttribute('id');
-    const liElement = document.createElement('li');
+    let liElement = document.createElement('li');
     liElement.dataset.nav = sectionDataNav;
     liElement.classList.add('nav_menu_item');
     const aElement = document.createElement('a');
