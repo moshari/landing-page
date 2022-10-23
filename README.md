@@ -2,12 +2,42 @@
 
 ## Table of Contents
 
-* [Instructions](#instructions)
+* [project description](#project description)
 
-## Instructions
+* [Goals] (#Goals)
 
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+* [Demo] (#Demo)
+  
+* [Contribute] (#Contribute)
 
-To get started, open `js/app.js` and start building out the app's functionality
+* [License] (#License)
 
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+## project description
+
+This project aims to implement everything that has been studied so far in the Front End Web Develoer by working on a real-world scenario.
+Build the project with html,css,js.
+
+## Goals
+The objective of this project is to apply the skills acquired from the course.
+
+### What was applied in this project
+- HTML.
+- CSS.
+- DOM.
+    - document.getElementById('id')
+    - document.getElementsByClassName('class')
+    - document.getElementsByTagName('tag');
+    - document.querySelector('.class');
+    - document.querySelectorAll('divt');
+    - appendChild('el')
+- Js.
+
+## Demo
+![Demo1](/img/Demo1.png "Demo1")
+![Demo2](/img/Demo2.png "Demo2")
+
+## Contribute
+open index.html through the Browser and open app.js to look my code and contribute if find any issue .
+
+## License
+This project is licensed with 
