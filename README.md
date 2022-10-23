@@ -5,8 +5,6 @@
 
 - [Landing Page Project](#landing-page-project)
 
-- [Table of Contents](#table-of-contents)
-
 - [project description](#project-description)
 
 - [Goals](#goals)
